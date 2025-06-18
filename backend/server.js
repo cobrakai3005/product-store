@@ -24,14 +24,6 @@ app.use(
 
 app.use("/api/products", prodcuctRoutes);
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
-//   app.get(/^(?!\/api).*/, (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "front", "dist", "index.html"));
-//   });
-// }
-
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
